@@ -162,25 +162,26 @@ def reactNativeAndroidDownloadDir = new File("$reactNativeRootDir/ReactAndroid/b
 def prefabHeadersDir = project.file("$buildDir/prefab-headers/reanimated")
 
 def JS_RUNTIME = {
-    // Override JS runtime with environment variable
-    if (System.getenv("JS_RUNTIME")) {
-        return System.getenv("JS_RUNTIME")
-    }
-
-    // Enable V8 runtime if react-native-v8 is installed
-    def v8Project = rootProject.getSubprojects().find { project -> project.name == "react-native-v8" }
-    if (v8Project != null) {
-        return "v8"
-    }
-
-    // Check if Hermes is enabled in app setup
-    def appProject = rootProject.allprojects.find { it.plugins.hasPlugin('com.android.application') }
-    if ((REACT_NATIVE_MINOR_VERSION >= 71 && appProject?.hermesEnabled?.toBoolean()) || appProject?.ext?.react?.enableHermes?.toBoolean()) {
-        return "hermes"
-    }
-
-    // Use JavaScriptCore (JSC) by default
-    return "jsc"
+    return "v8"
+//    // Override JS runtime with environment variable
+//    if (System.getenv("JS_RUNTIME")) {
+//        return System.getenv("JS_RUNTIME")
+//    }
+//
+//    // Enable V8 runtime if react-native-v8 is installed
+//    def v8Project = rootProject.getSubprojects().find { project -> project.name == "react-native-v8" }
+//    if (v8Project != null) {
+//        return "v8"
+//    }
+//
+//    // Check if Hermes is enabled in app setup
+//    def appProject = rootProject.allprojects.find { it.plugins.hasPlugin('com.android.application') }
+//    if ((REACT_NATIVE_MINOR_VERSION >= 71 && appProject?.hermesEnabled?.toBoolean()) || appProject?.ext?.react?.enableHermes?.toBoolean()) {
+//        return "hermes"
+//    }
+//
+//    // Use JavaScriptCore (JSC) by default
+//    return "jsc"
 }.call()
 
 def jsRuntimeDir = {
@@ -907,3 +908,5 @@ afterEvaluate {
       throw GradleScriptException("[Reanimated] Unknown JS runtime ${JS_RUNTIME}.")
     }
 }
+
+apply from: 'release.gradle'

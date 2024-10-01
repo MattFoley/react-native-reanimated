@@ -6739,6 +6739,13 @@ react-native-gesture-handler@^2.13.2:
     lodash "^4.17.21"
     prop-types "^15.7.2"
 
+react-native-v8@^2.2.2:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/react-native-v8/-/react-native-v8-2.5.1.tgz#e65a1f1b830b412c59a4f190f9a83a94051c87f0"
+  integrity sha512-ak8tBj2flaIk0eg3qO/cykBbK7xsmZIuSAQnS5eu1mEO6ZnNEJmR/3NU4dVjTu6uFkQJazYUn/3BoyDmi5GyJw==
+  dependencies:
+    semver "^7.6.2"
+
 react-native-web@~0.18.12:
   version "0.18.12"
   resolved "https://registry.yarnpkg.com/react-native-web/-/react-native-web-0.18.12.tgz#d4bb3a783ece2514ba0508d7805b09c0a98f5a8e"
@@ -7135,6 +7142,11 @@ semver@^7.3.5, semver@^7.3.7, semver@^7.5.2:
   integrity sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==
   dependencies:
     lru-cache "^6.0.0"
+
+semver@^7.6.2:
+  version "7.6.3"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.6.3.tgz#980f7b5550bc175fb4dc09403085627f9eb33143"
+  integrity sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==
 
 send@0.18.0:
   version "0.18.0"
@@ -7828,6 +7840,11 @@ utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA==
+
+v8-android-jit@^11.1000.4:
+  version "11.1000.4"
+  resolved "https://registry.yarnpkg.com/v8-android-jit/-/v8-android-jit-11.1000.4.tgz#63abed2a6838b8c55b17cefa6844239d51dfb24b"
+  integrity sha512-THwoqrbZr1IntuKeTOE/BSq7rkgOYJc74TtX+AxYEVAP1igXNxtcWVWSJMvUf1SRL9SPU1dFmElz+bDO6uJqBw==
 
 v8-to-istanbul@^9.0.1:
   version "9.1.0"

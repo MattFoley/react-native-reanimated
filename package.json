@@ -161,6 +161,8 @@
     "react-native-gesture-handler": "^2.13.2",
     "react-native-web": "~0.18.12",
     "react-test-renderer": "17.0.2",
+    "react-native-v8": "^2.2.2",
+    "v8-android-jit": "^11.1000.4",
     "shelljs": "^0.8.5",
     "ts-prune": "^0.10.3",
     "typescript": "^4.1.3"
